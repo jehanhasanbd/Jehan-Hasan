@@ -439,3 +439,62 @@ hr{ border: none; border-top: 1px solid rgba(255,255,255,0.08); }
   }
   .nav.show{ display:flex; }
 }
+
+/* Learning & Exploring Section */
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.learning-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.learning-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+.learning-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.learning-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+}
+
+.learning-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.learning-card .mini-tags {
+  margin-top: 6px;
+}
+
+.learning-card .mini-tags span {
+  font-size: 10px;
+  padding: 4px 8px;
+}
+
+/* Responsive - Learning Grid */
+@media (max-width: 900px) {
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+}

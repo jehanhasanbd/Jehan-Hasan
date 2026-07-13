@@ -103,3 +103,15 @@ if (contactForm) {
     e.target.reset();
   });
 }
+
+// ---------- Learning Cards - Open in new tab on click ----------
+qsa(".learning-card").forEach(card => {
+  card.addEventListener("click", (e) => {
+    // Don't trigger if clicking the button or its children
+    if (e.target.closest(".btn")) return;
+    const githubUrl = card.dataset.github;
+    if (githubUrl && githubUrl !== "#") {
+      window.open(githubUrl, "_blank");
+    }
+  });
+});
